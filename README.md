@@ -65,7 +65,7 @@ responsive-project/
 
 Clone the repository:
 
-git clone https://github.com/es33s/pro-animation.git
+git clone https://github.com/es33s/responsive-web-design.git
 
 Open index.html in your browser to view the project.
 
