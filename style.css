@@ -1,0 +1,389 @@
+
+/* some edits for smooth */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    color: #f2f2f2;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat" , sans-serif;
+    
+}
+
+
+/* the styling  */
+
+
+header {
+    background-image: url("./img/bg.jpg");
+    min-height: 100vh;
+    background-size: cover;
+}
+
+/* nav */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    
+}
+
+/* the title styling */
+
+nav h1 {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+/* the navbar styling  */
+
+nav .navbar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-right: 10px;
+    
+}
+
+nav .navbar a{
+    padding: 12px 15px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    /* this for animation */
+    position: relative;
+    
+}
+
+/* a hover effect */
+
+.navbar a:hover {
+                       color:rgb(180, 220, 255);
+}
+
+/* to add effect when you hover on navbar */
+
+.navbar a::before {
+                       content: "";
+                       position: absolute;
+                       bottom: 0px;
+                       left: 0;
+                       height: 3px;
+                       width: 0;
+                       transition: .8s linear  ;
+}
+
+.navbar a:hover::before {
+    content: "";
+    width: 100%;
+    background: rgb(236, 119, 119);
+}
+
+
+/* the header content styling */
+
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    margin: 2rem 17rem;
+    
+    
+    
+}
+
+.cont h2 {
+    font-size: 40px;
+    color: #222;
+    
+
+
+}
+
+.cont span {
+    color: #fff;
+   
+    /* the animation function used to 'typewriter' */
+    display: inline-block;
+    animation: typewriter 3s steps(9)  alternate infinite ,
+     blink 1s steps(10) infinite;
+     width: 0;
+     border-right:2px solid #222 ;
+     white-space: nowrap;
+     overflow: hidden;
+     margin-bottom: -10px;
+}
+
+.cont p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 400;
+   
+}
+
+.view-btn {
+    margin-top: 30px;
+    padding: 12px 15px;
+    border-radius: 30px;
+    transition: 0.3s ease 0s ;
+    background-color: #222;
+    text-decoration: none;
+    
+
+}
+
+/* view-btn hover effect */
+
+.view-btn:hover {
+                  border: 1px solid #fff;
+                  background-color: transparent;
+                  color:  #fff;     
+}
+
+
+/* the typewriter animation  */
+
+
+@keyframes  typewriter{
+
+    0% {
+        width:0ch;
+    }
+    100% {
+        width:9ch;
+    }
+
+}
+ 
+
+@keyframes blink {
+    40% ,60% {
+        border-right-color:transparent ;
+
+    }
+
+    100% {
+        border-right-color:#222 ;
+    }
+}
+
+
+/* the responsivity (every value in comment!) */
+
+
+
+/* 700px and 960 */
+
+
+@media (min-width:700px) and (max-width:960px) {
+
+.cont {
+    margin: 2rem 7rem;
+}
+   
+
+}
+
+
+/* 560px and 699px  */
+
+@media (min-width:560px) and (max-width:699px) {
+
+
+
+
+nav {
+    flex-direction: column;
+}
+
+
+.cont {
+    margin: 2rem 4rem;  
+}
+
+.navbar {
+    margin-right: 0;
+}
+
+
+}
+
+
+/* 400px and 559px */
+
+
+@media (min-width:400px) and (max-width:559px) {
+
+
+
+
+
+    nav {
+        flex-direction: column;
+        
+    }
+
+    nav .navbar {
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+
+
+.cont {
+    margin: 2rem 2rem;  
+}
+
+.cont h2 {
+    font-size: 30px;
+}
+
+.cont p {
+    font-size: 16px;
+}
+
+.navbar {
+    margin-right: 0;
+}
+
+
+}
+
+
+
+/* 360px and 399px */
+
+
+@media (min-width:360px) and (max-width:399px)  {
+
+
+nav {
+    flex-direction: column;
+
+}
+
+
+nav h1 {
+    font-size: 20px;
+}
+
+.navbar a {
+    font-size: 10px;
+    padding: 7px 9px;
+}
+
+nav .navbar {
+
+    gap: 0px;
+}
+
+
+
+.cont {
+    margin: 2rem 2rem;  
+}
+
+.cont h2 {
+    font-size: 25px;
+}
+
+.cont p {
+    font-size: 12px;
+}
+
+
+
+
+.navbar {
+    margin-right: 0;
+}
+
+}
+
+/* 250px and 359px  */
+
+
+
+@media (min-width: 250px) and (max-width: 359px) {
+
+    nav {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    nav h1 {
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    nav .navbar {
+        width: 100%;
+        justify-content: center;
+        gap: 0;
+        margin-right: 0;
+        padding: 8px 0;
+    }
+
+    nav .navbar a {
+        font-size: 10px;
+        padding: 7px 7px;
+    }
+
+    .cont {
+        display: flex;
+        width: calc(100% - 20px);
+        height: 55vh;
+        margin: 2rem 10px;
+        padding: 10px;
+        border: 2px solid;
+        border-radius: 12px;
+       
+    }
+
+    .cont h2 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .cont span {
+        font-size: 18px;
+        margin-bottom: -7px;
+    }
+
+    .cont p {
+        font-size: 11px;
+        margin-top: 8px;
+    }
+
+    .view-btn {
+        font-size: 11px;
+        padding: 9px 11px;
+        margin-top: 18px;
+    }
+
+    .navbar {
+        margin-right: 0;
+    }
+}
+
+
+/* the code here finish!! */
+
+
+
+
